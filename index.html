@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="test/html; charset=utf-8"/>
+<meta http-equiv="Expires" content="Tue, 01 Jan 1980 1:00:00 GMT">
+<meta http-equiv="Parama" content="no-cache">
+<title>index</title>
+
+<head>
+    <style>
+        body {
+            /*background: #586b89;*/
+            /*background-image: linear-gradient(to top, #859bc4 0%, #52729e 100%);*/
+            /*background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);*/
+            font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        }
+        .myMOUSEpointer{
+            cursor: pointer;
+        }
+        #diamond_pink {
+            display: inline-block;
+            width: 120px;
+            height: 120px;
+            background: #ffdddd;
+            opacity: 0.8;
+            /* Rotate */
+            transform: rotate(-45deg);
+            /* Rotate Origin */
+            transform-origin: 0 100%;
+            margin: 60px 0 10px 310px;
+            float: inherit;
+            border: 3px dashed #ffffff;
+        }
+        #diamond_pink:hover {
+            box-shadow: #ffdddd 0em 0em 2em;
+            background-color: #ffdddd;
+            border: 3px dashed #fc7e7e;
+            opacity: 1.0;
+        }
+        #diamond_green {
+            display: inline-block;
+            width: 120px;
+            height: 120px;
+            background: #c2f0db;
+            opacity: 0.8;
+            /* Rotate */
+            transform: rotate(-45deg);
+            /* Rotate Origin */
+            transform-origin: 0 100%;
+            margin: 60px 0 10px 310px;
+            float: inherit;
+            border: 3px dashed #ffffff;
+        }
+        #diamond_green:hover {
+            box-shadow: #c2f0db 0em 0em 2em;
+            background-color: #c2f0db;
+            border: 3px dashed #75b796;
+            opacity: 1.0;
+        }
+        #diamond_blue {
+            display: inline-block;
+            width: 120px;
+            height: 120px;
+            background: #c4e0ff;
+            opacity: 0.8;
+            /* Rotate */
+            transform: rotate(-45deg);
+            /* Rotate Origin */
+            transform-origin: 0 100%;
+            margin: 60px 0 10px 310px;
+            float: inherit;
+            border: 3px dashed #ffffff;
+        }
+        #diamond_blue:hover {
+            box-shadow: #c4e0ff 0em 0em 2em;
+            background-color: #c4e0ff;
+            border: 3px dashed #3f9aff;
+            opacity: 1.0;
+        }
+        #diamond_yellow {
+            display: inline-block;
+            width: 120px;
+            height: 120px;
+            background: #fff5c4;
+            opacity: 0.8;
+            /* Rotate */
+            transform: rotate(-45deg);
+            /* Rotate Origin */
+            transform-origin: 0 100%;
+            margin: 60px 0 10px 310px;
+            float: inherit;
+            border: 3px dashed #ffffff;
+        }
+        #diamond_yellow:hover {
+            box-shadow: #fff8d6 0em 0em 2em;
+            border: 3px dashed #ffac00;
+            background-color: #fff5c4;
+            opacity: 1.0;
+        }
+
+        a.in_red,
+        a.in_red:link,
+        a.in_red:visited {
+            color: #db4646;
+            text-decoration: none;
+            text-shadow: #ff6d6d 0.1em 0.1em 0.2em;
+        }
+
+        a.in_red:hover {
+            color: #fc7e7e;
+            text-decoration: none;
+            text-shadow: #ff6d6d 0.1em 0.1em 0.2em;
+        }
+
+        a.in_red:active {
+            color: #fc7e7e;
+            text-decoration: none;
+            text-shadow: #ff6d6d 0.1em 0.1em 0.2em;
+        }
+
+        a.in_blue,
+        a.in_blue:link,
+        a.in_blue:visited {
+            color: #2977ce;
+            text-decoration: none;
+            text-shadow: #3f9aff 0.1em 0.1em 0.2em;
+        }
+
+        a.in_blue:hover {
+            color: #3f9aff;
+            text-shadow: #3f9aff 0.1em 0.1em 0.2em;
+        }
+
+        a.in_blue:active {
+            color: #3f9aff;
+            text-shadow: #3f9aff 0.1em 0.1em 0.2em;
+        }
+        a.in_yellow,
+        a.in_yellow:link,
+        a.in_yellow:visited {
+            color: #ffb200;
+            text-decoration: none;
+            text-shadow: #ffb200 0.1em 0.1em 0.2em;
+        }
+
+        a.in_yellow:hover {
+            color: #ffb200;
+            text-shadow: #ffb200 0.1em 0.1em 0.2em;
+        }
+
+        a.in_yellow:active {
+            color: #ffb200;
+            text-shadow: #ffb200 0.1em 0.1em 0.2em;
+        }
+        a.in_green,
+        a.in_green:link,
+        a.in_green:visited {
+            color: #75b796;
+            text-decoration: none;
+            text-shadow: #75b796 0.1em 0.1em 0.2em;
+        }
+
+        a.in_green:hover {
+            color: #75b796;
+            text-decoration: none;
+            text-shadow: #75b796 0.1em 0.1em 0.2em;
+        }
+
+        a.in_green:active {
+            color: #75b796;
+            text-decoration: none;
+            text-shadow: #75b796 0.1em 0.1em 0.2em;
+        }
+
+        .bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: -999;
+        }
+        .bg img {
+            min-height: 100%;
+            width: 100%;
+        }
+        img {
+            /*filter: none;*/
+            filter:grayscale(60%);
+            /*filter:blur(2px);*/
+            filter:sepia(80%);
+            filter: opacity(30%);
+            filter:brightness(50%);
+            /*filter:contrast(50%);*/
+        }
+
+    </style>
+    <!--About visual-pic Style-->
+    <style type="text/css">
+        #slideshow {
+            width:   1600px;
+            height:  900px;
+            padding: 0;
+            margin:  0;
+            overflow:hidden;
+        }
+        #slideshow img {
+            background-color: #eee;
+            width:  1600px;
+            height: 900px;
+            top:  0;
+            left: 0;
+        }
+        .flex-caption {
+            color: white;
+            font-size: 100px;
+            text-transform: uppercase;
+            z-index:1;
+        }
+        hr.style-two {
+            border: 0;
+            background-image: linear-gradient(to right, #ffdddd, #9cbee5, #ffdddd);
+        }
+    </style>
+    <!-- include jQuery library -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <!-- include Cycle plugin -->
+    <script type="text/javascript" src="http://malsup.github.com/jquery.cycle.all.js"></script>
+
+    <!-- include Cycle plugin -->
+    <script type="text/javascript" src="http://malsup.github.com/jquery.cycle.all.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#slideshow').cycle({
+                fx: 'fade',
+                infinite: true,
+                speed: 4000, //2000
+                timeout: 2000, //1000
+                autoplay: true
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <!--div class="bg" id= "slideshow">
+        <a><img src="picture/seasky.jpg" alt="1" style="width:100%;max-width:2000px"/></a>
+        <a><img src="picture/seasky2.jpg" alt="2" style="width:100%;max-width:2000px"/></a>
+        <a><img src="picture/sky.jpg" alt="2" style="width:100%;max-width:2000px"/></a>
+    </div-->
+    <hr class="style-two" size="3px" align="center" width="80%" color="#9cbee5" style="margin-top: 20px">
+    <p style="text-align: center;font-size: 20px;color: #9cbee5;">THIS WEBSITE DISPLAY THE HOMEWORK OF I4010 BY SNOWMINT</p>
+    <hr class="style-two" size="4px" align="center" width="80%" color="#9cbee5">
+
+    <div id="diamond_pink" style="margin-top: 5.5%" onclick="location.href='../20190218/index.html'" class="myMOUSEpointer">
+        <div>
+            <a class="in_red" href="20190218/index.html" style="margin-left: 20%;opacity: 1;"><p style="transform: rotate(+45deg);text-align: center;">20190218<br><strong>自我介紹</strong></p></a>
+        </div>
+    </div>
+    <div id="diamond_blue" onclick="location.href='../20190304/index.html'" class="myMOUSEpointer">
+        <div>
+            <a class="in_blue" href="20190304/index.html" style="margin-left: 20%"><p style="transform: rotate(+45deg);text-align: center;">20190304<br><strong>RWD網頁</strong></p></a>
+        </div>
+    </div>
+    <div id="diamond_pink" onclick="location.href='../20190311/index.php'" class="myMOUSEpointer">
+        <div>
+            <a class="in_red" href="20190311/index.php" style="margin-left: 20%"><p style="transform: rotate(+45deg);text-align: center;">20190311<br><strong>四則運算</strong></p></a>
+        </div>
+    </div>
+    <div id="diamond_blue" style="margin-top: 6%" onclick="location.href='../20190318/index.php'" class="myMOUSEpointer">
+        <div>
+            <a class="in_blue" href="20190318/index.php" style="margin-left: 20%"><p style="transform: rotate(+45deg);text-align: center;">20190318<br><strong>九九乘法</strong></p></a>
+        </div>
+    </div>
+    <div id="diamond_pink" onclick="location.href='../20190325/index01.php'" class="myMOUSEpointer">
+        <div>
+            <a class="in_red" href="20190325/index01.php" style="margin-left: 20%"><p style="transform: rotate(+45deg);text-align: center;">20190325<br><strong>近似值</strong></p></a>
+        </div>
+    </div>
+    <div id="diamond_blue" onclick="location.href='../20190325/index02.php'" class="myMOUSEpointer">
+        <div>
+            <a class="in_blue" href="20190325/index02.php" style="margin-left: 20%"><p style="transform: rotate(+45deg);text-align: center;">20190325<br><strong>猜數字</strong></p></a>
+        </div>
+    </div>
+    <div id="diamond_pink" style="margin-top: 6%" onclick="location.href='../20190401/index.php'" class="myMOUSEpointer">
+        <div>
+            <a class="in_red" href="20190401/index.php" style="margin-left: 20%"><p style="transform: rotate(+45deg);text-align: center;">20190401<br><strong>日曆</strong></p></a>
+        </div>
+    </div>
+    <div id="diamond_blue" onclick="location.href='../20190513/contactmgm.php'" class="myMOUSEpointer">
+        <div>
+            <a class="in_blue" href="20190513/contactmgm.php" style="margin-left: 20%"><p style="transform: rotate(+45deg);text-align: center;">20190513<br><strong>About DB</strong></p></a>
+        </div>
+    </div>
+    <div id="diamond_pink" onclick="location.href='../20190520/contactmgm.php'" class="myMOUSEpointer">
+        <div>
+            <a class="in_red" href="20190520/contactmgm.php" style="margin-left: 20%"><p style="transform: rotate(+45deg);text-align: center;">20190520<br><strong>Upload img</strong></p></a>
+            <!--正常上傳 70 分，mgm裡也同時顯示至少 90-->
+        </div>
+    </div>
+    <div id="diamond_blue" style="margin-top: 6%" onclick="location.href='../20190527/login.php'" class="myMOUSEpointer">
+        <div>
+            <a class="in_blue" href="20190527/login.php" style="margin-left: 20%"><p style="transform: rotate(+45deg);text-align: center;">20190527<br><strong>Login & Excel</strong></p></a>
+        </div>
+    </div>
+    <div id="diamond_pink" onclick="location.href='../more.html'" class="myMOUSEpointer">
+        <div>
+            <a class="in_red" href="20190603/login.php" style="margin-left: 20%"><p style="transform: rotate(+45deg);text-align: center;">20190603<br>Chapcha</p></a>
+        </div>
+    </div>
+    <div id="diamond_blue" style="margin-top: 6%" onclick="location.href='../more.html'" class="myMOUSEpointer">
+        <div>
+            <a class="in_blue" href="more.html" style="margin-left: 20%"><p style="transform: rotate(+45deg);text-align: center;">2019xxxx<br>xxxx</p></a>
+        </div>
+    </div>
+    <div id="diamond_pink" style="margin-top: 6%" onclick="location.href='../more.html'" class="myMOUSEpointer">
+        <div>
+            <a class="in_red" href="more.html" style="margin-left: 20%"><p style="transform: rotate(+45deg);text-align: center;">2019xxxx<br>xxxx</p></a>
+        </div>
+    </div>
+    <div id="diamond_green" onclick="location.href='../midterm/index.html'" class="myMOUSEpointer">
+        <div>
+            <a class="in_green" href="./midterm/index.html" style="margin-left: 20%"><p style="transform: rotate(+45deg);text-align: center;">20190422<br>Midterm</p></a>
+        </div>
+    </div>
+    <div id="diamond_yellow" onclick="location.href='http://i4010.cse.ttu.edu.tw:9696/ThinkSync/home.php'" class="myMOUSEpointer">
+        <div>
+            <a class="in_yellow" href="https://github.com/snowmint/ThinkSync-Coding" style="margin-left: 20%"><p style="transform: rotate(+45deg);text-align: center;">20190507<br>Final</p></a>
+        </div>
+    </div>
+</body>
